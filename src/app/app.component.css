@@ -1,0 +1,34 @@
+:host .header-principal{
+    width:100%;
+    height:20vh;
+    background: #008B8B;
+    margin-top: -0px;
+} 
+
+:host .itens-superiores{
+    margin-left: 0%;
+    display: inline-flex; 
+    align-items:center;
+}
+
+:host .imagens-superiores{
+    margin: 10px;
+    justify-content: right;
+}
+
+:host .texto-superior{
+    font-size: 24px;
+    margin-left: 50%;
+    color: white;
+    text-align: right;
+}
+
+:host .texto-inferior{
+    margin-left: 30%;
+    text-align: right;
+}
+
+:host .icon-inferior{
+    height: 30px !important;
+    width: 30px !important;
+}
