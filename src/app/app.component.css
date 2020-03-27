@@ -4,7 +4,9 @@
     background: #008B8B;
     margin-top: -0px;
 } 
-
+:host :active .navitem{
+    background-color: #008B8B;
+}
 :host .itens-superiores{
     margin-left: 0%;
     display: inline-flex; 
@@ -17,10 +19,9 @@
 }
 
 :host .texto-superior{
-    font-size: 24px;
-    margin-left: 50%;
+    font-size: 20px;
     color: white;
-    text-align: right;
+    text-align: left;
 }
 
 :host .texto-inferior{
