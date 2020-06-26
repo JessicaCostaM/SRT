@@ -1,13 +1,30 @@
+<div style="margin-left: 5rem">
+    <div style="display: flex;">
+        <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        <p>></p>
+        <p style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
+    </div>
+</div>
 <div style="justify-content:center; text-align: center;">
-    <div style="width: 50vw;display: inline-block;margin-top: 7vh;">
+    <div style="width: 70vw;height: 50vh;display: inline-block;margin-top: 7vh;">
         <div class="row" class="texto-central">
-            <h4>Vamos ajudar ajuda-lo a achar uma tecnica para avaliar seu sistema 
-                e te faremos perguntas sobre as caracteristicas dele.</h4>
-            <h2>Você esta pronto para comerçar?</h2>
-            <div>
-                <button class="btn btn-secondary"> Sim </button>
-                <button class="btn btn-secondary"> Não </button>
-            </div>
+            <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Começar!</b></h2>
+            <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual o tipo de técnica que você deseja utilizar?</b></h2>
         </div>
+        <div *ngIf="respostasSalvas.length > 0"class="row" class="resposta-central">
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[0]}}</b></h2>
+            <span>
+                <i class="fa fa-comment" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div *ngIf="respostasSalvas.length > 0"class="row" class="texto-central">
+            <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual a plataforma do jogo que você quer avaliar?</b></h2>
+        </div>
+        <div *ngIf="respostasSalvas.length > 1"class="row" class="resposta-central">
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[1]}}</b></h2>
+        </div>
+    </div>
+    <div style="justify-content: space-around;">
+        <button *ngFor="let resposta of respostasAtual" (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: cadetblue;border-color: cadetblue;margin-left: 1rem;margin-right: 1rem;"> {{resposta}} </button>
     </div>
 </div>

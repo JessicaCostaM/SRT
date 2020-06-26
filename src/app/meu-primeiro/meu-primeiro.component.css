@@ -1,4 +1,10 @@
 :host .texto-central{
    font-style: inherit;
+   text-align: left;
+   font-family: 'Times New Roman', Times, serif;
+}
+:host .resposta-central{
+   font-style: inherit;
+   text-align: right;
    font-family: 'Times New Roman', Times, serif;
 }
