@@ -16,4 +16,7 @@ export class InicioTextoComponent implements OnInit {
   comecar(){
     this.router.navigateByUrl("/srt/comecar");
   }
+  lista(){
+    this.router.navigateByUrl("/srt/lista");
+  }
 }

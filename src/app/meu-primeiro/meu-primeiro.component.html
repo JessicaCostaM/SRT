@@ -1,30 +1,74 @@
 <div style="margin-left: 5rem">
     <div style="display: flex;">
-        <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        <a routerLink="/inicio">
+            <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        </a>
         <p>></p>
         <p style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
     </div>
 </div>
 <div style="justify-content:center; text-align: center;">
-    <div style="width: 70vw;height: 50vh;display: inline-block;margin-top: 7vh;">
+    <div style="width: 70vw;height: 30vh;display: inline-block;margin-top: 7vh;">
         <div class="row" class="texto-central">
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Começar!</b></h2>
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual o tipo de técnica que você deseja utilizar?</b></h2>
         </div>
         <div *ngIf="respostasSalvas.length > 0"class="row" class="resposta-central">
-            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[0]}}</b></h2>
-            <span>
-                <i class="fa fa-comment" aria-hidden="true"></i>
-            </span>
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[0].nome}}</b></h2>
+            <!-- <clr-icon style="position: relative;" shape="help-info" size="72" ></clr-icon> -->
+
         </div>
         <div *ngIf="respostasSalvas.length > 0"class="row" class="texto-central">
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual a plataforma do jogo que você quer avaliar?</b></h2>
         </div>
         <div *ngIf="respostasSalvas.length > 1"class="row" class="resposta-central">
-            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[1]}}</b></h2>
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[1].nome}}</b></h2>
+        </div>
+        <div *ngIf="respostasSalvas.length > 1"class="row" class="texto-central">
+            <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Quem aplicaria a técnica?</b></h2>
+        </div>
+        <div *ngIf="respostasSalvas.length > 2"class="row" class="resposta-central">
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[2].nome}}</b></h2>
+        </div>
+        <div *ngIf="respostasSalvas.length > 2"class="row" class="texto-central">
+            <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual seria o ambiente de avaliação?</b></h2>
+        </div>
+        <div *ngIf="respostasSalvas.length > 3"class="row" class="resposta-central">
+            <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[3].nome}}</b></h2>
         </div>
     </div>
-    <div style="justify-content: space-around;">
-        <button *ngFor="let resposta of respostasAtual" (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: cadetblue;border-color: cadetblue;margin-left: 1rem;margin-right: 1rem;"> {{resposta}} </button>
+    <div *ngIf="!temResposta" class="lista-botoes" style="justify-content: space-around;">
+        <button *ngFor="let resposta of respostasAtual" (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: cadetblue;border-color: cadetblue;margin-left: 1rem;margin-right: 1rem;"> {{resposta.nome}} </button>
+    </div>
+    <div *ngIf="temResposta" style="justify-content: center; display: block;height: 50vh;margin-top: 7rem;">
+        <div>
+            <h1>Algumas sugestões de tecnicas</h1>
+        </div>
+        <div *ngIf="Resultado.length == 0" style="margin-top: 3rem;">
+            <h3>Infelizmente não encontramos nada</h3>
+        </div>
+        <div  style="justify-content: center; display: flex;">
+            <div *ngFor="let result of Resultado" style="width: auto">
+                <div class="clr-row" style="width: 15vw;justify-content: center;margin: 1rem;">
+                    <div class="clr-col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>{{result.nome}}</b>
+                            </div>
+                            <div class="card-block">
+                                <div class="card-title">
+                                    Descrição
+                                </div>
+                            </div>
+                            <!-- <div class="card-footer">
+                                <button class="btn btn-sm btn-link">Footer Action 1</button>
+                                <button class="btn btn-sm btn-link">Footer Action 2</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
     </div>
 </div>

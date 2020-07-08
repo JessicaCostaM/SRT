@@ -9,6 +9,48 @@ export class ListaTecnicasComponent implements OnInit {
 
   constructor() { }
 
+  Tecnicas = [
+    {
+      nome: "SeGUE",
+      descricao:""
+    },
+    {
+      nome: "Serious Games Usability Testing",
+      descricao:""
+    },
+    {
+      nome: "PLAY",
+      descricao:""
+    },
+    {
+      nome: "SG-LOM",
+      descricao:""
+    },
+    {
+      nome: "Wangenheim, C. G. ",
+      descricao:""
+    },
+    {
+      nome: "MEEGA+",
+      descricao:""
+    },
+    {
+      nome: "EGameFlow",
+      descricao:""
+    },
+    {
+      nome: "mGBL",
+      descricao:""
+    },
+    {
+      nome: "PHEG",
+      descricao:""
+    },
+    {
+      nome: "UsaECG",
+      descricao:""
+    },
+  ]
   ngOnInit() {
   }
 

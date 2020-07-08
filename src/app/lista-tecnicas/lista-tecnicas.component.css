@@ -1,0 +1,10 @@
+.lista{
+    margin-top: 1vh;
+}
+
+@media screen and (min-height: 800px){
+    
+    .lista{
+        margin-top: 7vh;
+    }
+}
