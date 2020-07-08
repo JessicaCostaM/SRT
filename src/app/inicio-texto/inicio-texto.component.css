@@ -1,0 +1,10 @@
+.lista-botoes{
+    margin-top: 2rem;
+}
+
+@media screen and (min-height: 800px){
+    
+    .lista-botoes{
+        margin-top: 5rem;
+    }
+}

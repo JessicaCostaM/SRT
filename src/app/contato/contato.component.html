@@ -1,0 +1,112 @@
+<div style="margin-left: 5rem">
+    <div style="display: flex;">
+        <a routerLink="/inicio">
+            <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        </a>
+        <p>></p>
+        <p style="color: #CB6528;margin-left: 0.5em;"><b>Contato</b></p>
+    </div>
+</div>
+
+<div style="margin:5rem;margin-top: 2rem;">
+    <clr-tabs>
+        <clr-tab>
+            <button clrTabLink id="link1">Sugestões de Novas Técnicas</button>
+            <clr-tab-content id="content1" *clrIfActive="true">
+                <div>
+                    <h3 style="font-weight: 400;">
+                        <b>
+                            Deseja sugerir uma nova técnica de avaliação para este respositório?
+                        </b>
+                    </h3>
+                    <form clrForm>
+                        <clr-input-container>
+                          <label>Nome Completo</label>
+                          <input clrInput placeholder="Digite seu nome" name="name" />
+                        </clr-input-container>
+                      </form>
+                    <form clrForm>
+                        <clr-input-container>
+                          <label>Email</label>
+                          <input clrInput placeholder="Digite seu Email" name="name" />
+                        </clr-input-container>
+                      </form>
+                      <form clrForm>
+                        <clr-textarea-container>
+                          <label>Mensagem</label>
+                          <textarea clrTextarea  name="description" required></textarea>
+                        </clr-textarea-container>
+                      </form>
+                      <div style="justify-content: right;margin-top: 1rem;">
+                        <button class="btn btn-primary" style="background-color: #CB6528;border-color: #CB6528;margin-left: 16rem;">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+            <button clrTabLink>Outros Assuntos</button>
+            <clr-tab-content *clrIfActive>
+                <div>
+                    <h3 style="font-weight: 400;">
+                        <b>
+                            Por que não há um padrão sobre as informações de cada técnica?
+                        </b>
+                    </h3>
+                    <p>
+                        Os dados extraídos de cada técnica foram obtidos principalmente a partir da leitura de trabalhos acadêmicos, e as informações disponíveis dependem de vários fatores, podem ser eles: o tipo de técnica, o meio de publicação, as informações que o autor desejou relatar. No entanto, disponibilizamos a referência principal dos trabalhos apresentados por nosso repositório para que o interessado em conhecer um pouco mais sobre a técnica possa orientar-se.
+                    </p>
+                    <h3 style="font-weight: 400;">
+                        <b>
+                            Por que eu conheço uma técnica que não está no repositório?
+                        </b>
+                    </h3>
+                    <p>
+                        Isso pode acontecer devido à metodologia que utilizamos para desenvolver nosso trabalho. A técnica metodológica Snowball  ( Bola de Neve”) nos possibilitou encontrar trabalhos que estivessem nas referências das principais Revisões Sistemáticas encontradas. Se você possui uma nova técnica para sugerir, por favor, acesse: 
+                    </p>
+                    <h3 style="font-weight: 400;">
+                        <b>
+                            Alguma informação colocada no Repositório não corresponde à realidade?
+                        </b>
+                    </h3>
+                    <p>
+                        Nós estamos sempre à procura do aprimoramento de nossa ferramenta, todos os direitos autorais dos autores de cada artigo foram devidamente preversados. Nosso compromisso é ajudar a desenvolvedores e avaliadores de software a garatir a qualidade e servir de facilitador pra encontrar a técnica mais adequada. Há algum problema? Escreva uma mensagem pra gente.
+                    </p>
+                    <div style="margin-bottom: 10rem;">
+
+                        <h3 style="font-weight: 400;">
+                            <b>
+                                Não encontrou o que queria? Escreve pra gente.
+                            </b>
+                        </h3>
+                        <form clrForm style="padding: 0;">
+                            <clr-input-container style="padding:  0rem;">
+                              <label style="padding:  0rem;">Nome Completo</label>
+                              <input clrInput placeholder="Digite seu nome" name="name" style="padding:  0rem;" />
+                            </clr-input-container>
+                          </form>
+                        <form clrForm>
+                            <clr-input-container style="padding:  0rem;">
+                              <label style="padding:  0rem;">Email</label>
+                              <input style="padding:  0rem;" clrInput placeholder="Digite seu Email" name="name" />
+                            </clr-input-container>
+                          </form>
+                          <form clrForm>
+                            <clr-textarea-container style="padding:  0rem;">
+                              <label style="padding:  0rem;">Mensagem</label>
+                              <textarea clrTextarea  name="description" required></textarea>
+                            </clr-textarea-container>
+                            <div style="justify-content: right;margin-top: 1rem;">
+                                <button class="btn btn-primary" style="background-color: #CB6528;border-color: #CB6528;margin-left: 16rem;">
+                                    Enviar
+                                </button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </clr-tab-content>
+        </clr-tab>
+    </clr-tabs>
+
+</div>

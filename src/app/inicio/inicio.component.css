@@ -17,9 +17,25 @@
     min-height: 50%;
 } */
 .texto-superior{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     color: white;
     text-align: left;
     position: relative;
+}
+.inicio-topico {
+    margin-top: 23vh;
+}
+@media screen and (min-height: 800px){
+
+    .inicio-topico {
+        margin-top: 35vh;
+    }
+    .texto-superior{
+        font-size: 50px;
+        font-weight: 500;
+        color: white;
+        text-align: left;
+        position: relative;
+    }
 }

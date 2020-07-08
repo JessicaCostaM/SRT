@@ -1,6 +1,8 @@
 <div style="margin-left: 5rem">
     <div style="display: flex;">
-        <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        <a routerLink="/inicio">
+            <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
+        </a>
         <p>></p>
         <p style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
     </div>
@@ -9,14 +11,14 @@
     <div style="width: 70vw;height: 50vh;display: inline-block;margin-top: 7vh;">
         <div>
             <h1 style="font-size: 40px;color: #CB6528;text-align: left;">
-                <b>Olá! Quer encontrar a técninca  de avaliação para Jogos Educacionais que mais combina com seus interesses?</b>
+                <b>Olá! Quer encontrar a técnica  de avaliação para Jogos Educacionais que mais combina com seus interesses?</b>
             </h1>
             <p style="font-size: 20px;text-align: left;">
                 Nosso principal objetivo é ajudar você a avaliar a qualidade de Jogos Educacionais; reunimos um conjunto de técnicas com características distintas. Sabemos que avaliar sistemas não é uma tarefa trivial, ainda mais se tratando de jogos sérios, que possuem características peculiares e que levam em consideração diversos fatores.
             </p>
         </div>
-        <div style="justify-content: space-around;margin-top: 5rem;">
-            <button (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: #CB6528;border-color: #CB6528;margin-left: 1rem;margin-right: 1rem;"> Começar </button>
+        <div class="lista-botoes" style="justify-content: space-around;">
+                <button (click)="comecar()" class="btn btn-primary" style="background-color: #CB6528;border-color: #CB6528;margin-left: 1rem;margin-right: 1rem;"> Começar </button>
             <button (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: #CB6528;border-color: #CB6528;margin-left: 1rem;margin-right: 1rem;"> Ver listagem completa de técnicas </button>
         </div>
     </div>

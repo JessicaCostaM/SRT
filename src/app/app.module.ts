@@ -11,6 +11,7 @@ import { ListaTecnicasComponent } from './lista-tecnicas/lista-tecnicas.componen
 import { InicioComponent } from './inicio/inicio.component';
 import { SRTComponent } from './srt/srt.component';
 import { InicioTextoComponent } from './inicio-texto/inicio-texto.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InicioTextoComponent } from './inicio-texto/inicio-texto.component';
     ListaTecnicasComponent,
     InicioComponent,
     SRTComponent,
-    InicioTextoComponent
+    InicioTextoComponent,
+    ContatoComponent
   ],
   imports: [
     NgbModule,
