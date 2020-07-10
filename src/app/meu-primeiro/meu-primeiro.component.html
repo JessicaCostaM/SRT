@@ -48,7 +48,7 @@
             <h3>Infelizmente não encontramos nada</h3>
         </div>
         <div  style="justify-content: center; display: flex;">
-            <div *ngFor="let result of Resultado" style="width: auto">
+            <div *ngFor="let result of Resultado" style="width: auto;cursor: pointer;" (click)="VerTecnica()">
                 <div class="clr-row" style="width: 15vw;justify-content: center;margin: 1rem;">
                     <div class="clr-col-12">
                         <div class="card">

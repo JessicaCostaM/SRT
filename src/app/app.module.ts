@@ -12,6 +12,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SRTComponent } from './srt/srt.component';
 import { InicioTextoComponent } from './inicio-texto/inicio-texto.component';
 import { ContatoComponent } from './contato/contato.component';
+import { TecnicaComponent } from './tecnica/tecnica.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContatoComponent } from './contato/contato.component';
     InicioComponent,
     SRTComponent,
     InicioTextoComponent,
-    ContatoComponent
+    ContatoComponent,
+    TecnicaComponent
   ],
   imports: [
     NgbModule,

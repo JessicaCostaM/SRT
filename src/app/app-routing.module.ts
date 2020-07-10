@@ -6,6 +6,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SRTComponent } from './srt/srt.component';
 import { InicioTextoComponent } from './inicio-texto/inicio-texto.component';
 import { ContatoComponent } from './contato/contato.component';
+import { TecnicaComponent } from './tecnica/tecnica.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path: "contato",
         component: ContatoComponent
+      },
+      {
+        path: "segue",
+        component: TecnicaComponent
       }
     ]
   },

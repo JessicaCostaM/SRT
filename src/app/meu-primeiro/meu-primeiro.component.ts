@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-meu-primeiro',
@@ -144,7 +145,7 @@ export class MeuPrimeiroComponent implements OnInit {
       d4:[2],
     },
   ]
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
     this.respostasAtual = this.respostas1;
@@ -170,6 +171,10 @@ export class MeuPrimeiroComponent implements OnInit {
     })
     this.temResposta = true;
     console.log(this.Resultado)
+  }
+
+  VerTecnica(){
+    this.router.navigateByUrl('srt/segue');
   }
 
 }
