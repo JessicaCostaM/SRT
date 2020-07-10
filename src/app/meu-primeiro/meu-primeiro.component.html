@@ -7,8 +7,8 @@
         <p style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
     </div>
 </div>
-<div style="justify-content:center; text-align: center;">
-    <div style="width: 70vw;height: 30vh;display: inline-block;margin-top: 7vh;">
+<div  style="justify-content:center; text-align: center;">
+    <div *ngIf="!temResposta" style="width: 70vw;height: 30vh;display: inline-block;margin-top: 7vh;">
         <div class="row" class="texto-central">
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Começar!</b></h2>
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual o tipo de técnica que você deseja utilizar?</b></h2>
@@ -16,7 +16,6 @@
         <div *ngIf="respostasSalvas.length > 0"class="row" class="resposta-central">
             <h2 style="color: #CB6528;font-weight: 300;line-height: 0.5em;"> <b>{{respostasSalvas[0].nome}}</b></h2>
             <!-- <clr-icon style="position: relative;" shape="help-info" size="72" ></clr-icon> -->
-
         </div>
         <div *ngIf="respostasSalvas.length > 0"class="row" class="texto-central">
             <h2 style="color: #CB6528;font-weight: 400;line-height: 0.5em;"> <b>Qual a plataforma do jogo que você quer avaliar?</b></h2>
@@ -40,14 +39,14 @@
     <div *ngIf="!temResposta" class="lista-botoes" style="justify-content: space-around;">
         <button *ngFor="let resposta of respostasAtual" (click)="SalvarResposta(resposta)" class="btn btn-primary" style="background-color: cadetblue;border-color: cadetblue;margin-left: 1rem;margin-right: 1rem;"> {{resposta.nome}} </button>
     </div>
-    <div *ngIf="temResposta" style="justify-content: center; display: block;height: 50vh;margin-top: 7rem;">
+    <div *ngIf="temResposta" style="justify-content: center; display: block;height: 50vh;margin-top: 3rem;margin-bottom: 7rem;">
         <div>
-            <h1>Algumas sugestões de tecnicas</h1>
+            <h1>Resultado</h1>
         </div>
         <div *ngIf="Resultado.length == 0" style="margin-top: 3rem;">
             <h3>Infelizmente não encontramos nada</h3>
         </div>
-        <div  style="justify-content: center; display: flex;">
+        <div style="justify-content: center; display: flex; width:60vw; flex-wrap: wrap;margin: auto;">
             <div *ngFor="let result of Resultado" style="width: auto;cursor: pointer;" (click)="VerTecnica()">
                 <div class="clr-row" style="width: 15vw;justify-content: center;margin: 1rem;">
                     <div class="clr-col-12">

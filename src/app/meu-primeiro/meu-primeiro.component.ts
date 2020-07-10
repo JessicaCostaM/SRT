@@ -10,8 +10,41 @@ export class MeuPrimeiroComponent implements OnInit {
 
   temResposta = false;
   respostasSalvas = [];
-  respostasAtual = []; 
-  Resultado = []; 
+  respostasAtual = [];
+  Resultado = [
+    {
+      nome: "PLAY",
+      d1:[1],
+      d2:[0,1],
+      d3:[3],
+      d4:[0],
+    },{
+      nome: "SG-LOM",
+      d1:[1],
+      d2:[0,1,2],
+      d3:[0],
+      d4:[0],
+    },{
+      nome: "mGBL",
+      d1:[1],
+      d2:[0],
+      d3:[3],
+      d4:[1],
+    },{
+      nome: "PHEG",
+      d1:[1],
+      d2:[1],
+      d3:[3],
+      d4:[2],
+    },{
+      nome: "DEG-7-11 v1",
+      d1:[1],
+      d2:[1],
+      d3:[3],
+      d4:[2],
+    }
+    
+  ];
   respostas1 = [
     {
       nome:"Teste",
