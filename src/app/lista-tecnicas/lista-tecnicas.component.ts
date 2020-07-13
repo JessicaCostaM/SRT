@@ -50,8 +50,23 @@ export class ListaTecnicasComponent implements OnInit {
       nome: "UsaECG",
       descricao:""
     },
+    {
+      nome: "Gladcheff, Ana Paula",
+      descricao:""
+    },
+    {
+      nome: "Savi, Rafael",
+      descricao:""
+    },
+    
   ]
   ngOnInit() {
+    this.Tecnicas.sort(function (a, b) {
+      var textA = a.nome.toUpperCase();
+      var textB = b.nome.toUpperCase();
+    
+      return textA.localeCompare(textB);
+    });
   }
 
 }

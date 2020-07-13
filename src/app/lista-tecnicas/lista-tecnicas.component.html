@@ -12,22 +12,22 @@
         <p style="color: #CB6528;margin-left: 0.5em;"><b>Lista de Técnicas</b></p>
     </div>
 </div>
-<div style="justify-content:center; text-align: center;">
+<div style="justify-content:center; text-align: center;margin-bottom: 8rem;">
     <div class="lista" style="width: 50vw;display: inline-block;">
         <div class="row" class="texto-central">
-            <h2><b>Lista de Tecnicas</b></h2>
+            <h2><b>Listagem Completa</b></h2>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Descrição</th>
+                        <!-- <th>Descrição</th> -->
                         
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let tecnica of Tecnicas">
                         <td>{{tecnica.nome}}</td>
-                        <td>{{tecnica.descricao}}</td>
+                        <!-- <td>{{tecnica.descricao}}</td> -->
                     </tr>
                 </tbody>
             </table>
