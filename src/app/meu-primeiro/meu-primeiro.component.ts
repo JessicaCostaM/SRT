@@ -11,40 +11,7 @@ export class MeuPrimeiroComponent implements OnInit {
   temResposta = false;
   respostasSalvas = [];
   respostasAtual = [];
-  Resultado = [
-    {
-      nome: "PLAY",
-      d1:[1],
-      d2:[0,1],
-      d3:[3],
-      d4:[0],
-    },{
-      nome: "SG-LOM",
-      d1:[1],
-      d2:[0,1,2],
-      d3:[0],
-      d4:[0],
-    },{
-      nome: "mGBL",
-      d1:[1],
-      d2:[0],
-      d3:[3],
-      d4:[1],
-    },{
-      nome: "PHEG",
-      d1:[1],
-      d2:[1],
-      d3:[3],
-      d4:[2],
-    },{
-      nome: "DEG-7-11 v1",
-      d1:[1],
-      d2:[1],
-      d3:[3],
-      d4:[2],
-    }
-    
-  ];
+  Resultado = [];
   respostas1 = [
     {
       nome:"Teste",
@@ -112,19 +79,19 @@ export class MeuPrimeiroComponent implements OnInit {
       d1:[0],
       d2:[0,1,2,3],
       d3:[0],
-      d4:[0],
+      d4:[0,2],
     },
     {
-      nome: "Serious Games Usability Testing",
+      nome: "Procci, Katelyn",
       d1:[0],
       d2:[0,1],
-      d3:[3],
+      d3:[0,1,2,3],
       d4:[2],
     },
     {
       nome: "PLAY",
       d1:[1],
-      d2:[0,1],
+      d2:[0,1,3],
       d3:[3],
       d4:[0],
     },
@@ -166,17 +133,24 @@ export class MeuPrimeiroComponent implements OnInit {
     {
       nome: "PHEG",
       d1:[1],
-      d2:[1],
-      d3:[3],
-      d4:[2],
+      d2:[1,3],
+      d3:[0,1,2,3],
+      d4:[0,1,2],
     },
     {
       nome: "UsaECG",
       d1:[1],
-      d2:[1],
+      d2:[1,3],
       d3:[3],
-      d4:[2],
+      d4:[0,2],
     },
+    {
+      nome: "DEG-7-11 v1",
+      d1:[1],
+      d2:[0,1,3],
+      d3:[0,1,2,3],
+      d4:[0,2],
+    }
   ]
   constructor(public router: Router) { }
 
@@ -206,8 +180,8 @@ export class MeuPrimeiroComponent implements OnInit {
     console.log(this.Resultado)
   }
 
-  VerTecnica(){
-    this.router.navigateByUrl('srt/segue');
+  VerTecnica(nome){
+    this.router.navigateByUrl('srt/'+nome);
   }
 
 }

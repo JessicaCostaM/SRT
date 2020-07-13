@@ -3,8 +3,12 @@
         <a routerLink="/inicio">
             <p style="color: #008B8B;margin-right: 0.5em;"><b>SRT</b></p>
         </a>
-        <p>></p>
-        <p style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
+        <p *ngIf="!temResposta">></p>
+        <p *ngIf="!temResposta" style="color: #CB6528;margin-left: 0.5em;"><b>Começar</b></p>
+        <p *ngIf="temResposta">></p>
+        <p *ngIf="temResposta" style="color: #008B8B;margin-left: 0.5em;margin-right: 0.5em;"><b>Começar</b></p>
+        <p *ngIf="temResposta">></p>
+        <p *ngIf="temResposta" style="color: #CB6528;margin-left: 0.5em;"><b>Resultado</b></p>
     </div>
 </div>
 <div  style="justify-content:center; text-align: center;">
@@ -47,7 +51,7 @@
             <h3>Infelizmente não encontramos nada</h3>
         </div>
         <div style="justify-content: center; display: flex; width:60vw; flex-wrap: wrap;margin: auto;">
-            <div *ngFor="let result of Resultado" style="width: auto;cursor: pointer;" (click)="VerTecnica()">
+            <div *ngFor="let result of Resultado" style="width: auto;cursor: pointer;" (click)="VerTecnica(result.nome)">
                 <div class="clr-row" style="width: 15vw;justify-content: center;margin: 1rem;">
                     <div class="clr-col-12">
                         <div class="card">
@@ -56,7 +60,7 @@
                             </div>
                             <div class="card-block">
                                 <div class="card-title">
-                                    Descrição
+                                    
                                 </div>
                             </div>
                             <!-- <div class="card-footer">

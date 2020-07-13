@@ -36,7 +36,7 @@ const routes: Routes = [
         component: ContatoComponent
       },
       {
-        path: "segue",
+        path: ":tecnica",
         component: TecnicaComponent
       }
     ]
